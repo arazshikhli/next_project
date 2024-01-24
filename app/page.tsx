@@ -5,7 +5,7 @@ import { Rating } from '../components/Rating/Rating'
 
 export default function Home(): JSX.Element {
   const [counter, setCounter] = useState<number>(0)
-
+  const [rating, setRating] = useState<number>(4)
   return (
     <main>
       <p>
@@ -27,7 +27,7 @@ export default function Home(): JSX.Element {
       <Button appearance='primary' onClick={() => {
         setCounter(x => x - 1)
       }}>-</Button>
-      <Rating rating={5} />
+      <Rating rating={rating} isEdiable setRating={setRating} />
     </main>
   )
 }
